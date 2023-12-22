@@ -3,6 +3,21 @@ entries:
   application-bootstrap:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2023-12-22T16:28:31.463806875Z"
+    description: A Helm chart for bootstrapping your application into Kubernetes
+    digest: 07868663d8b516379ad8d650ae937ed8797afa51a84d630867a28b08c17ca3f5
+    keywords:
+    - application-bootstrap
+    - argocd-application
+    name: application-bootstrap
+    sources:
+    - https://github.com/blackbird-cloud/application-bootstrap-chart
+    type: application
+    urls:
+    - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2023-12-22T14:39:11.082830011Z"
     description: A Helm chart for bootstrapping your application into Kubernetes
     digest: 863a735d71d4829c7fc5fdb7bb7f631bd0d4043e35b6b247c6823da19264c1e6
@@ -22,4 +37,4 @@ entries:
     urls:
     - test-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-22T14:39:11.081769847Z"
+generated: "2023-12-22T16:28:31.463402716Z"
