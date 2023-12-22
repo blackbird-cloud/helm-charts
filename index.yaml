@@ -16,16 +16,6 @@ entries:
     urls:
     - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.2.tgz
     version: 0.0.2
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2023-12-22T14:39:11.082830011Z"
-    description: A Helm chart for bootstrapping your application into Kubernetes
-    digest: 863a735d71d4829c7fc5fdb7bb7f631bd0d4043e35b6b247c6823da19264c1e6
-    name: application-bootstrap
-    type: application
-    urls:
-    - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.1.tgz
-    version: 0.0.1
   test-chart:
   - apiVersion: v2
     appVersion: 1.16.0
