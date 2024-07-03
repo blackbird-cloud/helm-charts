@@ -41,4 +41,62 @@ entries:
     urls:
     - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.1.tgz
     version: 0.0.1
-generated: "2024-01-02T13:41:55.632664285Z"
+  baserow:
+  - apiVersion: v2
+    appVersion: 1.25.2
+    created: "2024-07-03T21:22:11.916640545Z"
+    dependencies:
+    - alias: baserow-backend-asgi
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-backend-wsgi
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-frontend
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-celery-beat-worker
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-celery-export-worker
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-celery-worker
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-celery-flower
+      condition: baserow-celery-flower.enabled
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.5.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.6.x
+    - alias: caddy
+      condition: caddy.enabled
+      name: caddy-ingress-controller
+      repository: https://caddyserver.github.io/ingress
+      version: 1.1.0
+    description: A Helm chart for Kubernetes
+    digest: dd2f400be8f5ec1ea06d437ae1271f0e6d52296911204dfcd35431e6dd9ac026
+    name: baserow
+    type: application
+    urls:
+    - https://blackbird-cloud.github.io/helm-charts/baserow-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-07-03T21:22:11.900911745Z"
