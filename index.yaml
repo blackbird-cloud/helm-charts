@@ -44,7 +44,7 @@ entries:
   baserow:
   - apiVersion: v2
     appVersion: 1.25.2
-    created: "2024-07-03T21:22:11.916640545Z"
+    created: "2024-07-04T07:40:45.137354647Z"
     dependencies:
     - alias: baserow-backend-asgi
       name: baserow
@@ -93,10 +93,10 @@ entries:
       repository: https://caddyserver.github.io/ingress
       version: 1.1.0
     description: A Helm chart for Kubernetes
-    digest: dd2f400be8f5ec1ea06d437ae1271f0e6d52296911204dfcd35431e6dd9ac026
+    digest: 1b46a46435d17bcffa737cad7d02491e92cdfa86dd59626c21475002da9761a6
     name: baserow
     type: application
     urls:
     - https://blackbird-cloud.github.io/helm-charts/baserow-0.0.1.tgz
     version: 0.0.1
-generated: "2024-07-03T21:22:11.900911745Z"
+generated: "2024-07-04T07:40:45.121744521Z"
