@@ -44,6 +44,63 @@ entries:
   baserow:
   - apiVersion: v2
     appVersion: 1.25.2
+    created: "2024-07-04T08:28:31.54252278Z"
+    dependencies:
+    - alias: baserow-backend-asgi
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-backend-wsgi
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-frontend
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-celery-beat-worker
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-celery-export-worker
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-celery-worker
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - alias: baserow-celery-flower
+      condition: baserow-celery-flower.enabled
+      name: baserow
+      repository: file://charts/baserow
+      version: 0.0.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.5.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.6.x
+    - alias: caddy
+      condition: caddy.enabled
+      name: caddy-ingress-controller
+      repository: https://caddyserver.github.io/ingress
+      version: 1.1.0
+    description: A Helm chart for Kubernetes
+    digest: a08751dd84a0fa0c3d06928e93e5811b64f021558b0f34b0cce9fdb2f43db4c5
+    name: baserow
+    type: application
+    urls:
+    - https://blackbird-cloud.github.io/helm-charts/baserow-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 1.25.2
     created: "2024-07-04T07:40:45.137354647Z"
     dependencies:
     - alias: baserow-backend-asgi
@@ -99,4 +156,4 @@ entries:
     urls:
     - https://blackbird-cloud.github.io/helm-charts/baserow-0.0.1.tgz
     version: 0.0.1
-generated: "2024-07-04T07:40:45.121744521Z"
+generated: "2024-07-04T08:28:31.527841007Z"
