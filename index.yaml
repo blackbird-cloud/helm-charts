@@ -1,45 +1,109 @@
 apiVersion: v1
 entries:
   application-bootstrap:
-    - apiVersion: v2
-      appVersion: 1.0.0
-      created: "2024-01-02T13:41:55.633092925Z"
-      description: A Helm chart for bootstrapping your application into Kubernetes
-      digest: 5f5cdb227f0a336a53f2051f970caa23c7f22d5df8c65532280cebb6d2f8bada
-      keywords:
-        - application-bootstrap
-        - argocd-application
-      name: application-bootstrap
-      sources:
-        - https://github.com/blackbird-cloud/application-bootstrap-chart
-      type: application
-      urls:
-        - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.3.tgz
-      version: 0.0.3
-    - apiVersion: v2
-      appVersion: 1.0.0
-      created: "2023-12-22T16:28:31.463806875Z"
-      description: A Helm chart for bootstrapping your application into Kubernetes
-      digest: 07868663d8b516379ad8d650ae937ed8797afa51a84d630867a28b08c17ca3f5
-      keywords:
-        - application-bootstrap
-        - argocd-application
-      name: application-bootstrap
-      sources:
-        - https://github.com/blackbird-cloud/application-bootstrap-chart
-      type: application
-      urls:
-        - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.2.tgz
-      version: 0.0.2
-    - apiVersion: v2
-      appVersion: 1.0.0
-      created: "2023-12-22T14:39:11.082830011Z"
-      description: A Helm chart for bootstrapping your application into Kubernetes
-      digest: 863a735d71d4829c7fc5fdb7bb7f631bd0d4043e35b6b247c6823da19264c1e6
-      name: application-bootstrap
-      type: application
-      urls:
-        - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.1.tgz
-      version: 0.0.1
-
-generated: "2024-07-19T11:57:31.527841007Z"
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-12-16T09:32:03.802339057+01:00"
+    description: A Helm chart for bootstrapping your application into Kubernetes
+    digest: 5f5cdb227f0a336a53f2051f970caa23c7f22d5df8c65532280cebb6d2f8bada
+    keywords:
+    - application-bootstrap
+    - argocd-application
+    name: application-bootstrap
+    sources:
+    - https://github.com/blackbird-cloud/application-bootstrap-chart
+    type: application
+    urls:
+    - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-12-16T09:32:03.801311336+01:00"
+    description: A Helm chart for bootstrapping your application into Kubernetes
+    digest: 07868663d8b516379ad8d650ae937ed8797afa51a84d630867a28b08c17ca3f5
+    keywords:
+    - application-bootstrap
+    - argocd-application
+    name: application-bootstrap
+    sources:
+    - https://github.com/blackbird-cloud/application-bootstrap-chart
+    type: application
+    urls:
+    - https://blackbird-cloud.github.io/helm-charts/application-bootstrap-0.0.2.tgz
+    version: 0.0.2
+  baserow:
+  - annotations:
+      artifacthub.io/category: database
+      artifacthub.io/keywords: baserow, database, application, scalable, open-source
+      artifacthub.io/links: |
+        - name: website
+          url: https://baserow.io
+        - name: source
+          url: https://gitlab.com/baserow/baserow
+        - name: helm
+          url: https://gitlab.com/baserow/baserow/-/tree/develop/deploy/helm/baserow?ref_type=heads
+      artifacthub.io/quality: production
+    apiVersion: v2
+    appVersion: 1.29.3
+    created: "2024-12-16T09:32:03.858073814+01:00"
+    dependencies:
+    - alias: baserow-backend-asgi
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-backend-wsgi
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-frontend
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-celery-beat-worker
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-celery-export-worker
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-celery-worker
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-celery-flower
+      condition: baserow-celery-flower.enabled
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.5.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.6.18
+    - alias: caddy
+      condition: caddy.enabled
+      name: caddy-ingress-controller
+      repository: https://caddyserver.github.io/ingress
+      version: 1.1.0
+    description: The open platform to create scalable databases and applications—without
+      coding.
+    digest: 6e75e7764d1623cba6f593905f717131f22a2bd2615604e77226f2e5a69e9e45
+    home: https://gitlab.com/baserow/baserow/-/tree/develop/deploy/helm/baserow?ref_type=heads
+    icon: https://baserow.io/img/favicon_192.png
+    name: baserow
+    sources:
+    - https://gitlab.com/baserow/baserow
+    - https://baserow.io
+    type: application
+    urls:
+    - https://blackbird-cloud.github.io/helm-charts/baserow-1.0.11.tgz
+    version: 1.0.11
+generated: "2024-12-16T09:32:03.800336296+01:00"
