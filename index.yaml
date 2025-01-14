@@ -3,7 +3,7 @@ entries:
   application-bootstrap:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-01-08T10:15:03.276807536+01:00"
+    created: "2025-01-14T22:41:28.635708692+01:00"
     description: A Helm chart for bootstrapping your application into Kubernetes
     digest: 5f5cdb227f0a336a53f2051f970caa23c7f22d5df8c65532280cebb6d2f8bada
     keywords:
@@ -18,7 +18,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-01-08T10:15:03.27633067+01:00"
+    created: "2025-01-14T22:41:28.634947081+01:00"
     description: A Helm chart for bootstrapping your application into Kubernetes
     digest: 07868663d8b516379ad8d650ae937ed8797afa51a84d630867a28b08c17ca3f5
     keywords:
@@ -44,8 +44,82 @@ entries:
           url: https://gitlab.com/baserow/baserow/-/tree/develop/deploy/helm/baserow?ref_type=heads
       artifacthub.io/quality: production
     apiVersion: v2
+    appVersion: 1.30.1
+    created: "2025-01-14T22:41:28.728098916+01:00"
+    dependencies:
+    - alias: baserow-backend-asgi
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-backend-wsgi
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-frontend
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-celery-beat-worker
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-celery-export-worker
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-celery-worker
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - alias: baserow-celery-flower
+      condition: baserow-celery-flower.enabled
+      name: baserow
+      repository: file://charts/baserow-common
+      version: 1.0.11
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.5.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.6.18
+    - alias: caddy
+      condition: caddy.enabled
+      name: caddy-ingress-controller
+      repository: https://caddyserver.github.io/ingress
+      version: 1.1.0
+    description: The open platform to create scalable databases and applications—without
+      coding.
+    digest: d96a7099a4c3c2f9a4948ae630616f531c8bb275c009de4a9c841064e52f5027
+    home: https://gitlab.com/baserow/baserow/-/tree/develop/deploy/helm/baserow?ref_type=heads
+    icon: https://baserow.io/img/favicon_192.png
+    name: baserow
+    sources:
+    - https://gitlab.com/baserow/baserow
+    - https://baserow.io
+    type: application
+    urls:
+    - https://blackbird-cloud.github.io/helm-charts/baserow-1.0.14.tgz
+    version: 1.0.14
+  - annotations:
+      artifacthub.io/category: database
+      artifacthub.io/keywords: baserow, database, application, scalable, open-source
+      artifacthub.io/links: |
+        - name: website
+          url: https://baserow.io
+        - name: source
+          url: https://gitlab.com/baserow/baserow
+        - name: helm
+          url: https://gitlab.com/baserow/baserow/-/tree/develop/deploy/helm/baserow?ref_type=heads
+      artifacthub.io/quality: production
+    apiVersion: v2
     appVersion: 1.29.3
-    created: "2025-01-08T10:15:03.369902168+01:00"
+    created: "2025-01-14T22:41:28.706213678+01:00"
     dependencies:
     - alias: baserow-backend-asgi
       name: baserow
@@ -119,7 +193,7 @@ entries:
       artifacthub.io/quality: production
     apiVersion: v2
     appVersion: 1.29.3
-    created: "2025-01-08T10:15:03.332549571+01:00"
+    created: "2025-01-14T22:41:28.678711054+01:00"
     dependencies:
     - alias: baserow-backend-asgi
       name: baserow
@@ -193,7 +267,7 @@ entries:
       artifacthub.io/quality: production
     apiVersion: v2
     appVersion: 1.29.3
-    created: "2025-01-08T10:15:03.295593282+01:00"
+    created: "2025-01-14T22:41:28.655497968+01:00"
     dependencies:
     - alias: baserow-backend-asgi
       name: baserow
@@ -254,4 +328,4 @@ entries:
     urls:
     - https://blackbird-cloud.github.io/helm-charts/baserow-1.0.11.tgz
     version: 1.0.11
-generated: "2025-01-08T10:15:03.27566223+01:00"
+generated: "2025-01-14T22:41:28.634332368+01:00"
